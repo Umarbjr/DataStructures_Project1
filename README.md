@@ -1,13 +1,13 @@
 Program #1
 
-Name:
+Name: Umar Balogun Mohammed
 
 COSC 2030
 
-Section #
+Section # 01
 
-Competing: YES or NO
+Competing: YES
 
-Best run time:
+Best run time: 
 
 Anything that doesn't work:
