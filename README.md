@@ -6,7 +6,7 @@ COSC 2030
 
 Section # 01
 
-Competing: YES
+Competing: YES or NO
 
 Best run time: 
 
