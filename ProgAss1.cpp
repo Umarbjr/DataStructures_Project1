@@ -23,8 +23,9 @@ vector<string> readDictionary() {
 		}
 	}
 	infile.close();
+	cout << "Number of words in the dictionary is " << count << "\n";
+
     return words;
-    cout << "Number of words in the dictionary is " << count;
 }
 
 void CleanWord(string &word){
@@ -103,11 +104,11 @@ int main(){
 	notFoundAvg = ((wrongSpell)/(dictionary.notFoundCompare));
 	cout<< "Done Checking and these are the results\n";
 	cout<< "Finished in time: " << timer.Time() << "\n";
-	cout << "There are " << correctSpell << "words found in the dictionary\n";
-	cout<< dictionary.foundCompare << "Compares. Average: " << foundAvg << "\n";
-	cout << "There are " << wrongSpell << "words NOT found in the dictionary\n";
-	cout << dictionary.notFoundCompare << "compares. Average: " << notFoundAvg << "\n";
-	cout << "There are " << skip << "words not checked." << "\n";
+	cout << "There are " << correctSpell << " words found in the dictionary\n";
+	cout<< dictionary.foundCompare << " Compares. Average: " << foundAvg << "\n";
+	cout << "There are " << wrongSpell << " words NOT found in the dictionary\n";
+	cout << dictionary.notFoundCompare << " compares. Average: " << notFoundAvg << "\n";
+	cout << "There are " << skip << " words not checked." << "\n";
 
     return 0;
 }

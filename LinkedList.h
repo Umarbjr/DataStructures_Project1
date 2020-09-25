@@ -4,8 +4,7 @@
 #include "NodeClass.h"
 
 template<class T>
-class linkedList
-{
+class linkedList{
 public:
     node<T>* head;
     long double size = 0;
@@ -33,12 +32,12 @@ public:
         for (node<T>* temp = head; temp != nullptr; temp = temp->next) {
 	        compares++;
             if (((temp->data).compare(item)) == 0) {
-                foundCompare = compares;
+                foundCompare += compares;
                 compares = 0;
                 return true;
             }
             else if (temp->next == nullptr) {
-                notFoundCompare = compares;
+                notFoundCompare += compares;
                 compares = 0;
                 return false;
             }
