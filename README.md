@@ -10,4 +10,4 @@ Competing: YES or NO
 
 Best run time: 
 
-Anything that doesn't work: The averages aren't correct
+Anything that doesn't work: The averages seem to be way off
