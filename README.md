@@ -4,7 +4,7 @@ Name: Umar Balogun Mohammed
 
 COSC 2030
 
-Section # 01
+Section # 11
 
 Competing: YES or NO
 
