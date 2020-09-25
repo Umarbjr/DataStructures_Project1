@@ -38,7 +38,7 @@ public:
                 return true;
             }
             else if (temp->next == nullptr) {
-                notFoundComp = compares;
+                notFoundCompare = compares;
                 compares = 0;
                 return false;
             }

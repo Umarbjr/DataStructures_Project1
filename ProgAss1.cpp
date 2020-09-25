@@ -8,6 +8,48 @@
 #include "timer.h"
 using namespace std;
 
+vector<string> readDictionary() {
+    ifstream infile;
+	vector<string> words;
+	string word;
+	infile.open("dict.txt");
+    long int count = 0;
+	if (infile.is_open()) {
+		infile >> word;
+		while (!infile.eof()) {
+			words.push_back(word);
+            count++;
+			infile >> word;
+		}
+	}
+	infile.close();
+    return words;
+    cout << "Number of words in the dictionary is " << count;
+}
+
+void CleanWord(string &word){
+    int length = word.size();
+    char temp;
+    for(int i=0; i<length; i++){
+        temp = word[i];
+        if(isalpha(temp)){
+            if(isupper(temp)){
+                word[i] = tolower(temp);
+            }
+        }
+        else if((isdigit(temp)) ||(temp == '\'') ){
+
+        }
+        else{
+            word = word.erase(i, 1);
+            length = word.size();
+            i--;
+        }
+
+    }
+
+}
+
 int main(){
     int skip = 0;
     float correctSpell = 0.0;
@@ -70,44 +112,3 @@ int main(){
     return 0;
 }
 
-vector<string> readDictionary() {
-    ifstream infile;
-	vector<string> words;
-	string word;
-	infile.open("dict.txt");
-    long int count = 0;
-	if (infile.is_open()) {
-		infile >> word;
-		while (!infile.eof()) {
-			words.push_back(word);
-            count++;
-			infile >> word;
-		}
-	}
-	infile.close();
-    return words;
-    cout << "Number of words in the dictionary is " << count;
-}
-
-void CleanWord(string &word){
-    int length = word.size();
-    char temp;
-    for(int i=0; i<length; i++){
-        temp = word[i];
-        if(isalpha(temp)){
-            if(isupper(temp)){
-                word[i] = tolower(temp);
-            }
-        }
-        else if((isdigit(temp)) ||(temp == '\'') ){
-
-        }
-        else{
-            word = word.erase(i, 1);
-            length = word.size();
-            i--;
-        }
-
-    }
-
-}
